@@ -15,6 +15,15 @@ void main() {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
+    // Advance time by 3 seconds to get past the splash screen.
+    await tester.pump(const Duration(seconds: 3));
+    await tester.pumpAndSettle();
+
+    // Since MyHomePage is no longer the initial screen, we need to push it manually or navigate to it if we want to test it.
+    // However, for a smoke test, we can just test the new initial screen flow, or push MyHomePage directly.
+
+    await tester.pumpWidget(const MaterialApp(home: MyHomePage(title: 'Flutter Demo Home Page')));
+
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
