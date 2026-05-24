@@ -17,7 +17,9 @@ class PatternHunterApp extends StatelessWidget {
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF0F172A), // Deep Slate/Dark Blue
+        scaffoldBackgroundColor: const Color(
+          0xFF0F172A,
+        ), // Deep Slate/Dark Blue
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF6366F1), // Indigo
           brightness: Brightness.dark,

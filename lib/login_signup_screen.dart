@@ -43,9 +43,7 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          color: Color(0xFF0F172A),
-        ),
+        decoration: const BoxDecoration(color: Color(0xFF0F172A)),
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -255,7 +253,9 @@ class _LoginSignupScreenState extends State<LoginSignupScreen> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       elevation: 5,
-                      shadowColor: const Color(0xFF6366F1).withValues(alpha: 0.5),
+                      shadowColor: const Color(
+                        0xFF6366F1,
+                      ).withValues(alpha: 0.5),
                     ),
                     child: Text(
                       isLogin ? 'Login' : 'Sign Up',

@@ -4,8 +4,9 @@ import 'package:flutter_app/splash_screen.dart';
 import 'package:flutter_app/login_signup_screen.dart';
 
 void main() {
-  testWidgets('Splash screen navigates to LoginSignupScreen after 2 seconds',
-      (WidgetTester tester) async {
+  testWidgets('Splash screen navigates to LoginSignupScreen after 2 seconds', (
+    WidgetTester tester,
+  ) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const PatternHunterApp());
 
